@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5C3E7DF7-7FFE-46DF-8148-9F72A75E891D}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Patterns</RootNamespace>
+    <AssemblyName>Patterns</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Abstract Factory\AbstractFamilyFactory.cs" />
+    <Compile Include="Abstract Factory\Client.cs" />
+    <Compile Include="Abstract Factory\Factory2\Child2FamilyFactory.cs" />
+    <Compile Include="Abstract Factory\Factory2\CreationType1ChildFactory2.cs" />
+    <Compile Include="Abstract Factory\Factory2\CreationType2ChildFactory2.cs" />
+    <Compile Include="Abstract Factory\Factory1\Child1FamilyFactory.cs" />
+    <Compile Include="Abstract Factory\Factory1\CreationType1ChildFactory1.cs" />
+    <Compile Include="Abstract Factory\Factory1\CreationType2ChildFactory1.cs" />
+    <Compile Include="Abstract Factory\ICreationType.cs" />
+    <Compile Include="Bridge\Client.cs" />
+    <Compile Include="Bridge\Creation\AbstractCreation.cs" />
+    <Compile Include="Bridge\Creation\ChildCreation1.cs" />
+    <Compile Include="Bridge\Creation\ChildCreation2.cs" />
+    <Compile Include="Bridge\Instrument\AbstractInstrument.cs" />
+    <Compile Include="Bridge\Instrument\ChildInstrument1.cs" />
+    <Compile Include="Bridge\Instrument\ChildInstrument2.cs" />
+    <Compile Include="Builder\Client.cs" />
+    <Compile Include="Builder\Creation.cs" />
+    <Compile Include="Builder\CreationBuilder1.cs" />
+    <Compile Include="Builder\CreationBuilder2.cs" />
+    <Compile Include="Builder\ParentCreationBuilder.cs" />
+    <Compile Include="Builder\StepCreationBuilder.cs" />
+    <Compile Include="Decorator\BaseDecorator.cs" />
+    <Compile Include="Decorator\ChildDecorator1.cs" />
+    <Compile Include="Decorator\ChildDecorator2.cs" />
+    <Compile Include="Decorator\Client.cs" />
+    <Compile Include="Decorator\Creation.cs" />
+    <Compile Include="Decorator\IDecorator.cs" />
+    <Compile Include="Factory Method\ChildCreator2.cs" />
+    <Compile Include="Factory Method\Client.cs" />
+    <Compile Include="Factory Method\ParentCreator.cs" />
+    <Compile Include="Factory Method\ChildCreator1.cs" />
+    <Compile Include="Factory Method\Creation1.cs" />
+    <Compile Include="Factory Method\Creation2.cs" />
+    <Compile Include="Factory Method\IProduct.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
